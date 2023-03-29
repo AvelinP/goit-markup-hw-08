@@ -1,0 +1,16 @@
+body {
+  font-family: var(--font-Roboto), var(--font-sans-serif);
+  font-style: var(--font-normal);
+  font-weight: var(--font-weight-general);
+  font-size: var(--font-size-general);
+  color: var(--text-color);
+}
+
+.list-styles {
+  list-style: none;
+  position: relative;
+}
+
+.link-text-decoration {
+  text-decoration: none;
+}

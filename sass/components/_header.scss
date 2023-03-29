@@ -1,0 +1,123 @@
+.header-container {
+  background-color: var(--background-color-header-and-main);
+  border-bottom: 1px solid #ececec;
+}
+.header {
+  display: flex;
+  flex-grow: 1;
+}
+
+.header-nav {
+  display: flex;
+  flex-grow: 1;
+  height: 80px;
+}
+
+.header-contact {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 40px;
+
+  &__details {
+    font-weight: var(--font-weight-500);
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--text-color2);
+    color: currentColor;
+  }
+
+  &__mail-icon,
+  &__tel-icon {
+    fill: currentColor;
+  }
+
+  &__list {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__list:hover {
+    color: var(--highlight-color);
+  }
+}
+.header-nav-list {
+  display: flex;
+  flex-grow: 1;
+
+  align-items: center;
+  gap: 50px;
+  padding: 0px;
+  margin-top: 24px;
+  margin-bottom: 25px;
+
+  &__active-link::after {
+    content: "";
+    border: 2px solid var(--highlight-color);
+    width: 100%;
+    position: absolute;
+    bottom: -31px;
+    border-radius: 2px;
+    visibility: visible;
+    left: 0;
+  }
+
+  &__logo {
+    font-family: var(--font-Raleway);
+    font-weight: var(--font-weight-bold);
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--color6);
+
+    margin-right: 43px;
+  }
+  &__logo::before {
+    font-family: var(--font-Raleway);
+    font-weight: var(--font-weight-bold);
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    content: "Web";
+    color: var(--highlight-color);
+  }
+  &__link {
+    font-weight: var(--font-weight-500);
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__link:hover {
+    color: var(--highlight-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    gap: 69px;
+  }
+  .header-contact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    display: flex;
+    flex-grow: 1;
+    gap: 0px;
+  }
+  .header-contact {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 40px;
+  }
+}

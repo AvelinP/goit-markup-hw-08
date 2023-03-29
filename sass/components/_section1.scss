@@ -1,0 +1,281 @@
+.section1 {
+  background-color: var(--footer-background-color);
+  // background-image: linear-gradient(var(--color16), var(--color17)),
+  //   url("../images/index-background.jpg");
+  background-image: linear-gradient(var(--color16), var(--color17)),
+    url("../images/background-M-480.png");
+  background-size: cover;
+
+  &__service-button {
+    background: var(--highlight-color);
+    box-shadow: 0px 4px 4px var(--color13);
+    border-radius: 4px;
+    font-weight: var(--font-weight-700);
+    font-size: 16px;
+    line-height: 1.875;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    height: 50px;
+
+    color: var(--background-color-header-and-main);
+  }
+
+  &__title {
+    font-weight: --font-weight-900;
+    font-size: 44px;
+    line-height: 1.36;
+
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: var(--background-color-header-and-main);
+  }
+}
+.section1-content {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: var(--color21);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window {
+  position: absolute;
+  width: 450px;
+  height: 609px;
+
+  background: var(--background-color-header-and-main);
+  box-shadow: 0px 1px 3px var(--color7), 0px 1px 1px var(--color8),
+    0px 2px 1px var(--color9);
+  border-radius: 4px;
+
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    background: var(--background-color-header-and-main);
+    border: 1px solid var(--color10);
+    border-radius: 50%;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__close:hover {
+    color: var(--highlight-color);
+    cursor: pointer;
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.form {
+  padding: 40px;
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    position: relative;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: var(--text-color2);
+  }
+  &__item input {
+    height: 33.5px;
+    padding-left: 42px;
+  }
+  &__item textarea {
+    height: 120px;
+    resize: none;
+  }
+
+  &__title {
+    font-weight: var(--font-weight-700);
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin: 0px 0px 12px;
+  }
+
+  &__input {
+    border: 1px solid var(--color22);
+    border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__input:hover {
+    border: 1px solid var(--highlight-color);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__item textarea {
+    padding: 12px 16px;
+  }
+
+  &__item svg {
+    position: absolute;
+    left: 15px;
+    top: 32px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__item svg:hover {
+    fill: var(--highlight-color);
+    cursor: pointer;
+  }
+
+  &__item2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    color: var(--text-color2);
+  }
+
+  &__button {
+    width: 200px;
+    height: 50px;
+
+    background: var(--highlight-color);
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 4px 4px var(--color13);
+    border-radius: 4px;
+
+    font-weight: var(--font-weight-700);
+    font-size: 16px;
+    line-height: 1.875;
+    margin: auto;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--background-color-header-and-main);
+
+    padding: 0px;
+    border-width: 0px;
+  }
+  &__button:hover {
+    background: var(--hover-color);
+    cursor: pointer;
+  }
+
+  &__contact input[type="checkbox"]:checked + .replace-checkbox {
+    width: 16px;
+    height: 15px;
+    background: var(--highlight-color);
+    border-radius: 2px;
+    border: none;
+  }
+  &__contact input[type="checkbox"] {
+    display: none;
+  }
+
+  &__terms-and-conditions {
+    color: var(--color5);
+  }
+}
+
+.replace-checkbox {
+  display: flex;
+  width: var(--font-size-general);
+  height: 13px;
+  border-radius: 2px;
+  border: 2px solid var(--text-color);
+
+  & svg {
+    fill: var(--background-color-header-and-main);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section1 {
+    background-image: linear-gradient(var(--color16), var(--color17)),
+      url("../images/background-T-768.png");
+  }
+  .modal-window {
+    width: 450px;
+    height: 609px;
+  }
+  .form__item2 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section1 {
+    background-image: linear-gradient(var(--color16), var(--color17)),
+      url("../images/background-D-1600.png");
+  }
+  .modal-window {
+    width: 528px;
+    height: 581px;
+  }
+  .form__item2 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .section1 {
+    background-image: linear-gradient(var(--color16), var(--color17)),
+      url("../images/background-M-x2.png");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .section1 {
+    background-image: linear-gradient(var(--color16), var(--color17)),
+      url("../images/background-T-x2.png");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (min-resolution: 192dpi),
+  screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .section1 {
+    background-image: linear-gradient(var(--color16), var(--color17)),
+      url("../images/background-D-x2.png");
+  }
+}

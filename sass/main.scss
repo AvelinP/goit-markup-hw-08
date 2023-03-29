@@ -1,0 +1,116 @@
+@import "../sass/utils/variables";
+@import "../sass/components/general";
+@import "../sass/components/header";
+@import "../sass/components/section1";
+@import "./components/section2";
+@import "../sass/components/what-we-do";
+@import "../sass/components/our-team";
+@import "../sass/components/regular-customers";
+@import "../sass/components/footer";
+@import "../sass/components/portfolio-butons";
+@import "../sass/components/cards";
+@import "../sass/components/mobile-button";
+
+.container {
+  display: flexbox;
+}
+
+.container-width {
+  width: var(--phone-width);
+  margin: 0px auto;
+  overflow: hidden;
+}
+.section {
+  padding: 60px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .container-width {
+    width: 768px;
+    overflow: auto;
+  }
+  .section {
+    padding: 60px 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container-width {
+    width: 1200px;
+    overflow: auto;
+  }
+  .section {
+    padding: 94px 0px;
+  }
+}
+
+.section1__title-break,
+.what-we-do__title,
+.our-team__title,
+.our-team__member,
+.our-team__position {
+  text-align: center;
+}
+
+.section2-icons,
+.regular-customers-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-inline-start: 0px;
+  margin: 50px auto 0px;
+}
+
+.what-we-do__title,
+.our-team__title,
+.regular-customers__title {
+  font-family: var(--font-Roboto);
+  font-style: var(--font-normal);
+  font-weight: var(--font-weight-700);
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .what-we-do__title,
+  .our-team__title,
+  .regular-customers__title {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .what-we-do__title,
+  .our-team__title,
+  .regular-customers__title {
+    font-size: 36px;
+    line-height: 1.16;
+  }
+}
+
+.what-we-do__grid,
+.our-team__list {
+  display: flex;
+  gap: 30px;
+  padding-inline-start: 0px;
+  justify-content: center;
+}
+
+.social-media,
+.our-team-social-media__list {
+  display: flex;
+  flex-direction: row;
+  padding-inline-start: 0px;
+}
+
+.social-media li,
+.our-team-social-media__list li {
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-media li:hover,
+.our-team-social-media__list li:hover {
+  background: var(--highlight-color);
+}

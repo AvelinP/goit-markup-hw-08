@@ -1,0 +1,48 @@
+.regular-customers {
+  &__logo {
+    display: flex;
+    box-sizing: border-box;
+    width: 210px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__logo svg {
+    fill: #afb1b8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__logo svg:hover {
+    fill: var(--highlight-color);
+  }
+  &__logo:hover {
+    border: 1px solid var(--highlight-color);
+    border-radius: 4px;
+  }
+  &__title {
+    margin: 0px;
+  }
+}
+.regular-customers-grid {
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .regular-customers-grid {
+    flex-wrap: wrap;
+  }
+  .regular-customers__logo {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .regular-customers-grid {
+    flex-wrap: nowrap;
+  }
+  .regular-customers__logo {
+    width: 170px;
+  }
+}

@@ -1,0 +1,37 @@
+.what-we-do {
+  &__title {
+    margin: 0px 0px 50px;
+  }
+
+  &__image {
+    position: relative;
+  }
+  &__image-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-Roboto);
+    font-style: var(--font-normal);
+    font-weight: var(--font-weight-700);
+    font-size: var(--font-size-general);
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin: 0px;
+
+    color: var(--background-color-header-and-main);
+    position: absolute;
+    height: 70px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+
+    background: var(--color18);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .what-we-do {
+    display: none;
+  }
+}
