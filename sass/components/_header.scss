@@ -72,6 +72,11 @@
 
     margin-right: 43px;
   }
+  // &__logo {
+  //   @extend .header-nav-list__logo;
+  //   color: red;
+  // }
+
   &__logo::before {
     font-family: var(--font-Raleway);
     font-weight: var(--font-weight-bold);
